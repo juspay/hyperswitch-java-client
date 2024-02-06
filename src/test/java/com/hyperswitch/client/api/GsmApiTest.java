@@ -1,6 +1,6 @@
 package com.hyperswitch.client.api;
 
-import com.hyperswitch.client.ApiClient;
+import com.hyperswitch.client.HsApiClient;
 import com.hyperswitch.client.model.GsmCreateRequest;
 import com.hyperswitch.client.model.GsmDeleteRequest;
 import com.hyperswitch.client.model.GsmDeleteResponse;
@@ -26,7 +26,7 @@ class GsmApiTest {
 
     @BeforeEach
     public void setup() {
-        api = new ApiClient().buildClient(GsmApi.class);
+        api = new HsApiClient().buildClient(GsmApi.class);
     }
 
     

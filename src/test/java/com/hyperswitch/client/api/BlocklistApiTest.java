@@ -1,6 +1,6 @@
 package com.hyperswitch.client.api;
 
-import com.hyperswitch.client.ApiClient;
+import com.hyperswitch.client.HsApiClient;
 import com.hyperswitch.client.model.BlocklistDataKind;
 import com.hyperswitch.client.model.BlocklistRequest;
 import com.hyperswitch.client.model.BlocklistResponse;
@@ -23,7 +23,7 @@ class BlocklistApiTest {
 
     @BeforeEach
     public void setup() {
-        api = new ApiClient().buildClient(BlocklistApi.class);
+        api = new HsApiClient().buildClient(BlocklistApi.class);
     }
 
     

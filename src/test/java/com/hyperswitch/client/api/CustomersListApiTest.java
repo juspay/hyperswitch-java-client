@@ -1,6 +1,6 @@
 package com.hyperswitch.client.api;
 
-import com.hyperswitch.client.ApiClient;
+import com.hyperswitch.client.HsApiClient;
 import com.hyperswitch.client.model.CustomerResponse;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
@@ -21,7 +21,7 @@ class CustomersListApiTest {
 
     @BeforeEach
     public void setup() {
-        api = new ApiClient().buildClient(CustomersListApi.class);
+        api = new HsApiClient().buildClient(CustomersListApi.class);
     }
 
     

@@ -1,6 +1,6 @@
 package com.hyperswitch.client.api;
 
-import com.hyperswitch.client.ApiClient;
+import com.hyperswitch.client.HsApiClient;
 import java.time.OffsetDateTime;
 
 import com.hyperswitch.client.model.Currency;
@@ -40,7 +40,7 @@ class PaymentsApiTest {
 
     @BeforeEach
     public void setup() {
-        api = new ApiClient("api_key","").buildClient(PaymentsApi.class);
+        api = new HsApiClient("api_key","").buildClient(PaymentsApi.class);
     }
 
     

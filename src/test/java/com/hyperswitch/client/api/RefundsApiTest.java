@@ -1,6 +1,6 @@
 package com.hyperswitch.client.api;
 
-import com.hyperswitch.client.ApiClient;
+import com.hyperswitch.client.HsApiClient;
 import com.hyperswitch.client.model.RefundListRequest;
 import com.hyperswitch.client.model.RefundListResponse;
 import com.hyperswitch.client.model.RefundRequest;
@@ -25,7 +25,7 @@ class RefundsApiTest {
 
     @BeforeEach
     public void setup() {
-        api = new ApiClient().buildClient(RefundsApi.class);
+        api = new HsApiClient().buildClient(RefundsApi.class);
     }
 
     

@@ -1,4 +1,4 @@
-package com.hyperswitch;
+package com.hyperswitch.client;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -26,8 +26,8 @@ import com.hyperswitch.client.ApiResponseDecoder;
 
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-28T20:00:07.865622+05:30[Asia/Kolkata]")
-public class ApiClient {
-  private static final Logger log = Logger.getLogger(ApiClient.class.getName());
+public class HsApiClient {
+  private static final Logger log = Logger.getLogger(HsApiClient.class.getName());
 
   public interface Api {}
 
@@ -36,7 +36,7 @@ public class ApiClient {
   private Map<String, RequestInterceptor> apiAuthorizations;
   private Feign.Builder feignBuilder;
 
-  public ApiClient() {
+  public HsApiClient() {
     apiAuthorizations = new LinkedHashMap<String, RequestInterceptor>();
     objectMapper = createObjectMapper();
     feignBuilder = Feign.builder()
@@ -44,15 +44,16 @@ public class ApiClient {
                 .encoder(new FormEncoder(new JacksonEncoder(objectMapper)))
                 .decoder(new ApiResponseDecoder(objectMapper))
                 .logger(new Slf4jLogger());
+    System.out.println(feignBuilder.toString());
   }
 
-  public ApiClient(String[] authNames) {
+  public HsApiClient(String[] authNames) {
     this();
     for(String authName : authNames) {
       log.log(Level.FINE, "Creating authentication {0}", authName);
       RequestInterceptor auth = null;
       if ("admin_api_key".equals(authName)) {
-        auth = new ApiKeyAuth("header", "api-key");
+        auth = new ApiKeyAuth("header", "test_admin");
       } else if ("api_key".equals(authName)) {
         auth = new ApiKeyAuth("header", "api-key");
       } else if ("ephemeral_key".equals(authName)) {
@@ -72,7 +73,7 @@ public class ApiClient {
    * Basic constructor for single auth name
    * @param authName
    */
-  public ApiClient(String authName) {
+  public HsApiClient(String authName) {
     this(new String[]{authName});
   }
 
@@ -81,7 +82,7 @@ public class ApiClient {
    * @param authName
    * @param apiKey
    */
-  public ApiClient(String authName, String apiKey) {
+  public HsApiClient(String authName, String apiKey) {
     this(authName);
     this.setApiKey(apiKey);
   }
@@ -90,7 +91,7 @@ public class ApiClient {
     return basePath;
   }
 
-  public ApiClient setBasePath(String basePath) {
+  public HsApiClient setBasePath(String basePath) {
     this.basePath = basePath;
     return this;
   }
@@ -107,7 +108,7 @@ public class ApiClient {
     return feignBuilder;
   }
 
-  public ApiClient setFeignBuilder(Feign.Builder feignBuilder) {
+  public HsApiClient setFeignBuilder(Feign.Builder feignBuilder) {
     this.feignBuilder = feignBuilder;
     return this;
   }
@@ -139,7 +140,7 @@ public class ApiClient {
    * Creates a feign client for given API interface.
    *
    * Usage:
-   *    ApiClient apiClient = new ApiClient();
+   *    HsApiClient apiClient = new HsApiClient();
    *    apiClient.setBasePath("http://localhost:8080");
    *    XYZApi api = apiClient.buildClient(XYZApi.class);
    *    XYZResponse response = api.someMethod(...);

@@ -37,26 +37,26 @@ And to use the api you can follow the examples bellow:
 ```java
 {
     //Set bearer token manually
-    ApiClient apiClient = new ApiClient("petstore_auth_client");
+    HsApiClient apiClient = new HsApiClient("petstore_auth_client");
     apiClient.setBasePath("https://localhost:8243/petstore/1/");
     apiClient.setAccessToken("TOKEN", 10000);
 
     //Use api key
-    ApiClient apiClient = new ApiClient("api_key", "API KEY");
+    HsApiClient apiClient = new HsApiClient("api_key", "API KEY");
     apiClient.setBasePath("https://localhost:8243/petstore/1/");
 
     //Use http basic authentication
-    ApiClient apiClient = new ApiClient("basicAuth");
+    HsApiClient apiClient = new HsApiClient("basicAuth");
     apiClient.setBasePath("https://localhost:8243/petstore/1/");
     apiClient.setCredentials("username", "password");
 
     //Oauth password
-    ApiClient apiClient = new ApiClient("oauth_password");
+    HsApiClient apiClient = new HsApiClient("oauth_password");
     apiClient.setBasePath("https://localhost:8243/petstore/1/");
     apiClient.setOauthPassword("username", "password", "client_id", "client_secret");
 
     //Oauth client credentials flow
-    ApiClient apiClient = new ApiClient("oauth_client_credentials");
+    HsApiClient apiClient = new HsApiClient("oauth_client_credentials");
     apiClient.setBasePath("https://localhost:8243/petstore/1/");
     apiClient.setClientCredentials("client_id", "client_secret");
 
@@ -69,7 +69,7 @@ And to use the api you can follow the examples bellow:
 
 ## Recommendation
 
-It's recommended to create an instance of `ApiClient` per thread in a multithreaded environment to avoid any potential issues.
+It's recommended to create an instance of `HsApiClient` per thread in a multithreaded environment to avoid any potential issues.
 
 ## Author
 

@@ -1,6 +1,6 @@
 package com.hyperswitch.client.api;
 
-import com.hyperswitch.client.ApiClient;
+import com.hyperswitch.client.HsApiClient;
 import com.hyperswitch.client.model.Currency;
 import com.hyperswitch.client.model.CustomerPaymentMethodsListResponse;
 import com.hyperswitch.client.model.PaymentMethodCreate;
@@ -27,7 +27,7 @@ class PaymentMethodsApiTest {
 
     @BeforeEach
     public void setup() {
-        api = new ApiClient().buildClient(PaymentMethodsApi.class);
+        api = new HsApiClient().buildClient(PaymentMethodsApi.class);
     }
 
     

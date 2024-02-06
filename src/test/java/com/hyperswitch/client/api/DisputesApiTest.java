@@ -1,6 +1,6 @@
 package com.hyperswitch.client.api;
 
-import com.hyperswitch.client.ApiClient;
+import com.hyperswitch.client.HsApiClient;
 import com.hyperswitch.client.model.DisputeResponse;
 import com.hyperswitch.client.model.DisputeStage;
 import com.hyperswitch.client.model.DisputeStatus;
@@ -24,7 +24,7 @@ class DisputesApiTest {
 
     @BeforeEach
     public void setup() {
-        api = new ApiClient().buildClient(DisputesApi.class);
+        api = new HsApiClient().buildClient(DisputesApi.class);
     }
 
     

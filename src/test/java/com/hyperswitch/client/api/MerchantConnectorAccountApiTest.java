@@ -1,6 +1,6 @@
 package com.hyperswitch.client.api;
 
-import com.hyperswitch.client.ApiClient;
+import com.hyperswitch.client.HsApiClient;
 import com.hyperswitch.client.model.MerchantConnectorCreate;
 import com.hyperswitch.client.model.MerchantConnectorDeleteResponse;
 import com.hyperswitch.client.model.MerchantConnectorResponse;
@@ -24,7 +24,7 @@ class MerchantConnectorAccountApiTest {
 
     @BeforeEach
     public void setup() {
-        api = new ApiClient().buildClient(MerchantConnectorAccountApi.class);
+        api = new HsApiClient().buildClient(MerchantConnectorAccountApi.class);
     }
 
     

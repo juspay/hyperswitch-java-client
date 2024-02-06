@@ -1,6 +1,6 @@
 package com.hyperswitch.client.api;
 
-import com.hyperswitch.client.ApiClient;
+import com.hyperswitch.client.HsApiClient;
 import com.hyperswitch.client.api.CustomersApi;
 import com.hyperswitch.client.model.CustomerDeleteResponse;
 import com.hyperswitch.client.model.CustomerRequest;
@@ -31,7 +31,7 @@ class CustomersApiTest {
 
     @BeforeEach
     public void setup() {
-        api = new ApiClient("api_key","").buildClient(CustomersApi.class);
+        api = new HsApiClient("api_key","").buildClient(CustomersApi.class);
     }
 
     

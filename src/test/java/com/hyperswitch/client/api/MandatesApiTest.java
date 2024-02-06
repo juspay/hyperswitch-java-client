@@ -1,6 +1,6 @@
 package com.hyperswitch.client.api;
 
-import com.hyperswitch.client.ApiClient;
+import com.hyperswitch.client.HsApiClient;
 import com.hyperswitch.client.model.MandateResponse;
 import com.hyperswitch.client.model.MandateRevokedResponse;
 import org.junit.jupiter.api.Test;
@@ -22,7 +22,7 @@ class MandatesApiTest {
 
     @BeforeEach
     public void setup() {
-        api = new ApiClient().buildClient(MandatesApi.class);
+        api = new HsApiClient().buildClient(MandatesApi.class);
     }
 
     

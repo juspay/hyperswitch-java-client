@@ -1,6 +1,6 @@
 package com.hyperswitch.client.api;
 
-import com.hyperswitch.client.ApiClient;
+import com.hyperswitch.client.HsApiClient;
 import com.hyperswitch.client.EncodingUtils;
 import com.hyperswitch.client.model.ApiResponse;
 
@@ -14,7 +14,7 @@ import java.util.Map;
 import feign.*;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-28T20:00:07.865622+05:30[Asia/Kolkata]")
-public interface MandatesApi extends ApiClient.Api {
+public interface MandatesApi extends HsApiClient.Api {
 
 
   /**

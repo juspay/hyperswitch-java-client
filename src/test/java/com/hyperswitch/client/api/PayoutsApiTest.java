@@ -1,6 +1,6 @@
 package com.hyperswitch.client.api;
 
-import com.hyperswitch.client.ApiClient;
+import com.hyperswitch.client.HsApiClient;
 import com.hyperswitch.client.model.PayoutActionRequest;
 import com.hyperswitch.client.model.PayoutCreateRequest;
 import com.hyperswitch.client.model.PayoutCreateResponse;
@@ -23,7 +23,7 @@ class PayoutsApiTest {
 
     @BeforeEach
     public void setup() {
-        api = new ApiClient().buildClient(PayoutsApi.class);
+        api = new HsApiClient().buildClient(PayoutsApi.class);
     }
 
     
