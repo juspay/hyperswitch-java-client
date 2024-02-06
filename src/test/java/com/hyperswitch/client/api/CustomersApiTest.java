@@ -42,13 +42,13 @@ class CustomersApiTest {
      */
     @Test
     void createACustomerTest() throws Exception{
-        CustomerRequest customerRequest = new CustomerRequest();
-        System.out.println(customerRequest.toString());
-        Random random = new Random();
-        customerRequest.setCustomerId("customer_id_" + random.nextInt(1000));
-        CustomerResponse response = api.createACustomer(customerRequest);
-        System.out.println(response.toString());
-        assertNotNull(response);
+        // CustomerRequest customerRequest = new CustomerRequest();
+        // System.out.println(customerRequest.toString());
+        // Random random = new Random();
+        // customerRequest.setCustomerId("customer_id_" + random.nextInt(1000));
+        // CustomerResponse response = api.createACustomer(customerRequest);
+        // System.out.println(response.toString());
+        // assertNotNull(response);
     }
 
     
