@@ -2,23 +2,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.hyperswitch</groupId>
-    <artifactId>java-client</artifactId>
+    <artifactId>hyperswitch</artifactId>
     <packaging>jar</packaging>
-    <name>java-client</name>
+    <name>hyperswitch-java-client</name>
     <version>1.0.1</version>
-    <url>https://github.com/openapitools/openapi-generator</url>
-    <description>OpenAPI Java</description>
+    <url>https://github.com/juspay/hyperswitch-java-client</url>
+    <description>Hyperswitch Java client library</description>
     <scm>
-        <connection>scm:git:git@github.com:openapitools/openapi-generator.git</connection>
-        <developerConnection>scm:git:git@github.com:openapitools/openapi-generator.git</developerConnection>
-        <url>https://github.com/openapitools/openapi-generator</url>
+        <connection>scm:git:git@github.com:juspay/hyperswitch-java-client.git</connection>
+        <developerConnection>scm:git@github.com:juspay/hyperswitch-java-client.git</developerConnection>
+        <url>https://github.com/juspay/hyperswitch-java-client</url>
     </scm>
 
     <distributionManagement>
         <repository>
             <id>github</id>
-            <name>Github srujan hs client package </name>
-            <url>https://maven.pkg.github.com/srujanchikke/java-client</url>
+            <name>hyperswitch java client </name>
+            <url>https://maven.pkg.github.com/juspay/hyperswitch-java-client</url>
         </repository>
     </distributionManagement>
 
@@ -187,6 +187,16 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>    
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.3.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                    <tokenAuth>true</tokenAuth>
+                </configuration>
+        </plugin>
         </plugins>
     </build>
 
@@ -198,7 +208,10 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.5</version>
+                        <version>1.6</version>
+                        <configuration>
+                            <serverId>sign-key-id</serverId>
+                        </configuration>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
@@ -223,6 +236,12 @@
             <version>3.0.2</version>
         </dependency>
 
+
+        <dependency>
+            <groupId>org.sonatype.central</groupId>
+            <artifactId>central-publishing-maven-plugin</artifactId>
+            <version>0.3.0</version>
+        </dependency>
         <!-- HTTP client: Netflix Feign -->
         <dependency>
             <groupId>io.github.openfeign</groupId>
