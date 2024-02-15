@@ -24,10 +24,9 @@ After the client library is installed/deployed, you can use it in your Maven pro
 
 ```xml
 <dependency>
-    <groupId>com.hyperswitch</groupId>
-    <artifactId>hyperswitch-java</artifactId>
-    <version>1.0.1</version>
-    <scope>compile</scope>
+    <groupId>io.github.juspay.hyperswitch</groupId>
+    <artifactId>hyperswitch-java-client</artifactId>
+    <version>0.0.1</version>
 </dependency>
 
 ```

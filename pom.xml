@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.hyperswitch</groupId>
-    <artifactId>hyperswitch</artifactId>
+    <groupId>io.github.juspay.hyperswitch</groupId>
+    <artifactId>hyperswitch-java-client</artifactId>
     <packaging>jar</packaging>
     <name>hyperswitch-java-client</name>
-    <version>1.0.1</version>
+    <version>0.0.1</version>
     <url>https://github.com/juspay/hyperswitch-java-client</url>
     <description>Hyperswitch Java client library</description>
     <scm>
@@ -16,18 +16,15 @@
 
     <distributionManagement>
         <repository>
-            <id>github</id>
-            <name>hyperswitch java client </name>
-            <url>https://maven.pkg.github.com/juspay/hyperswitch-java-client</url>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2</url>
         </repository>
     </distributionManagement>
 
-
     <licenses>
         <license>
-            <name>Unlicense</name>
-            <url>http://unlicense.org</url>
-            <distribution>repo</distribution>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
 
@@ -197,35 +194,25 @@
                     <tokenAuth>true</tokenAuth>
                 </configuration>
         </plugin>
+             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <configuration>
+                    <serverId>sign-key-id</serverId>
+                </configuration>
+                    <executions>
+                        <execution>
+                            <id>sign-artifacts</id>
+                            <phase>verify</phase>
+                            <goals>
+                                <goal>sign</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+            </plugin>
         </plugins>
     </build>
-
-    <profiles>
-        <profile>
-            <id>sign-artifacts</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.6</version>
-                        <configuration>
-                            <serverId>sign-key-id</serverId>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 
     <dependencies>
 
