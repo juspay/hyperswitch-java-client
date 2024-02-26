@@ -40,7 +40,7 @@ class PaymentsApiTest {
 
     @BeforeEach
     public void setup() {
-        api = new HsApiClient("api_key","").buildClient(PaymentsApi.class);
+        api = new HsApiClient("api_key","YOUR_API_KEY").buildClient(PaymentsApi.class);
     }
 
     
@@ -97,9 +97,13 @@ class PaymentsApiTest {
     @Test
     void createAPaymentTest() throws Exception {
         // PaymentsCreateRequest paymentsCreateRequest = new PaymentsCreateRequest();
-        // Long amount = 500L;
+        // Long amount = 100L;
         // paymentsCreateRequest.setAmount(amount);
         // paymentsCreateRequest.setCurrency(Currency.USD);
+        // paymentsCreateRequest.confirm(true);
+        // paymentsCreateRequest.customerId("futurebilling");
+        // paymentsCreateRequest.offSession(true);
+        // paymentsCreateRequest.setMandateId("YOUR_MANDATE_ID");
         // System.out.println(paymentsCreateRequest.toString());
         // PaymentsResponse response = api.createAPayment(paymentsCreateRequest);
         // System.out.println(response.toString());

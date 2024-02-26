@@ -63,6 +63,8 @@ public enum PaymentMethodType {
   BNI_VA("bni_va"),
   
   BRI_VA("bri_va"),
+
+  CARD("card"),
   
   CARD_REDIRECT("card_redirect"),
   
