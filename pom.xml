@@ -5,7 +5,7 @@
     <artifactId>hyperswitch-java-client</artifactId>
     <packaging>jar</packaging>
     <name>hyperswitch-java-client</name>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <url>https://github.com/juspay/hyperswitch-java-client</url>
     <description>Hyperswitch Java client library</description>
     <scm>

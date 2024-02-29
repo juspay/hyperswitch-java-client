@@ -178,11 +178,19 @@ class PaymentsApiTest {
      */
     @Test
     void retrieveAPaymentTest() {
-        String paymentId = null;
-        PaymentRetrieveBody paymentRetrieveBody = null;
+        // String paymentId = "PAYMENT_ATTEMPT_ID".toString();
+        // PaymentRetrieveBody paymentRetrieveBody = new PaymentRetrieveBody();
+        // paymentRetrieveBody.setForceSync(true);
         // PaymentsResponse response = api.retrieveAPayment(paymentId, paymentRetrieveBody);
-
+        // System.out.println(response.toString());
         // TODO: test validations
+    }
+
+    @Test
+    void retrieveAPaymentwithForcesync() {
+        // String paymentId = "PAYMENT_ATTEMPT_ID".toString();
+        // PaymentsResponse response = api.retrieveAPaymentwithForcesync(paymentId);
+        // System.out.println(response.toString());
     }
 
     

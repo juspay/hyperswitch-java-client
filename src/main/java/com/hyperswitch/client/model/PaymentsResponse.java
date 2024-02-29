@@ -203,7 +203,7 @@ public class PaymentsResponse {
   private PaymentMethodType paymentMethod;
 
   public static final String JSON_PROPERTY_PAYMENT_METHOD_DATA = "payment_method_data";
-  private JsonNullable<PaymentMethod> paymentMethodData = JsonNullable.<PaymentMethod>undefined();
+  private JsonNullable<PaymentMethodData> paymentMethodData = JsonNullable.<PaymentMethodData>undefined();
 
   public static final String JSON_PROPERTY_PAYMENT_TOKEN = "payment_token";
   private JsonNullable<String> paymentToken = JsonNullable.<String>undefined();
@@ -1163,8 +1163,8 @@ public class PaymentsResponse {
   }
 
 
-  public PaymentsResponse paymentMethodData(PaymentMethod paymentMethodData) {
-    this.paymentMethodData = JsonNullable.<PaymentMethod>of(paymentMethodData);
+  public PaymentsResponse paymentMethodData(PaymentMethodData paymentMethodData) {
+    this.paymentMethodData = JsonNullable.<PaymentMethodData>of(paymentMethodData);
     
     return this;
   }
@@ -1176,24 +1176,24 @@ public class PaymentsResponse {
   @javax.annotation.Nullable
   @JsonIgnore
 
-  public PaymentMethod getPaymentMethodData() {
+  public PaymentMethodData getPaymentMethodData() {
         return paymentMethodData.orElse(null);
   }
 
   @JsonProperty(JSON_PROPERTY_PAYMENT_METHOD_DATA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public JsonNullable<PaymentMethod> getPaymentMethodData_JsonNullable() {
+  public JsonNullable<PaymentMethodData> getPaymentMethodData_JsonNullable() {
     return paymentMethodData;
   }
   
   @JsonProperty(JSON_PROPERTY_PAYMENT_METHOD_DATA)
-  public void setPaymentMethodData_JsonNullable(JsonNullable<PaymentMethod> paymentMethodData) {
+  public void setPaymentMethodData_JsonNullable(JsonNullable<PaymentMethodData> paymentMethodData) {
     this.paymentMethodData = paymentMethodData;
   }
 
-  public void setPaymentMethodData(PaymentMethod paymentMethodData) {
-    this.paymentMethodData = JsonNullable.<PaymentMethod>of(paymentMethodData);
+  public void setPaymentMethodData(PaymentMethodData paymentMethodData) {
+    this.paymentMethodData = JsonNullable.<PaymentMethodData>of(paymentMethodData);
   }
 
 

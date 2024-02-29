@@ -316,6 +316,19 @@ public interface PaymentsApi extends HsApiClient.Api {
    * Payments - Retrieve
    * Payments - Retrieve  To retrieve the properties of a Payment. This may be used to get the status of a previously initiated payment or next action for an ongoing payment
    * @param paymentId The identifier for payment (required)
+   * @return PaymentsResponse
+   */
+  @RequestLine("GET /payments/{paymentId}?force_sync=true")
+  @Headers({
+    "Content-Type: application/json",
+    "Accept: application/json",
+  })
+  PaymentsResponse retrieveAPaymentwithForcesync(@Param("paymentId") String paymentId);
+
+  /**
+   * Payments - Retrieve
+   * Payments - Retrieve  To retrieve the properties of a Payment. This may be used to get the status of a previously initiated payment or next action for an ongoing payment
+   * @param paymentId The identifier for payment (required)
    * @param paymentRetrieveBody  (required)
    * @return PaymentsResponse
    */
