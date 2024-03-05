@@ -25,7 +25,8 @@ class RefundsApiTest {
 
     @BeforeEach
     public void setup() {
-        api = new HsApiClient().buildClient(RefundsApi.class);
+        api = new HsApiClient("api_key", "API_KEY")
+                .buildClient(RefundsApi.class);
     }
 
     
@@ -36,10 +37,15 @@ class RefundsApiTest {
      */
     @Test
     void createARefundTest() {
-        RefundRequest refundRequest = null;
+        RefundRequest refundRequest = new RefundRequest();
         // RefundResponse response = api.createARefund(refundRequest);
-
-        // TODO: test validations
+        // String paymentId = "PAYMENT_ID";
+        // refundRequest.setPaymentId(paymentId);
+        // Long amount = 100L;
+        // refundRequest.setAmount(amount);
+        // System.out.println(refundRequest.toString());
+        // RefundResponse response = api.createARefund(refundRequest);
+        // System.out.println(response.toString());
     }
 
     

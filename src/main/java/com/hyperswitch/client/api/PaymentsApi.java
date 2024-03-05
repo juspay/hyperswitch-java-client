@@ -37,7 +37,7 @@ public interface PaymentsApi extends HsApiClient.Api {
     "Content-Type: application/json",
     "Accept: application/json",
   })
-  void cancelPayment(@Param("paymentId") String paymentId, PaymentsCancelRequest paymentsCancelRequest);
+  PaymentsResponse cancelPayment(@Param("paymentId") String paymentId, PaymentsCancelRequest paymentsCancelRequest);
 
   /**
    * Payments - Cancel
