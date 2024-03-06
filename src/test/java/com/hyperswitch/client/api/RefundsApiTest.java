@@ -57,7 +57,7 @@ class RefundsApiTest {
     @Test
     void listAllRefundsTest() {
         RefundListRequest refundListRequest = null;
-        // RefundListResponse response = api.listAllRefunds(refundListRequest);
+        // Refun dListResponse response = api.listAllRefunds(refundListRequest);
 
         // TODO: test validations
     }
