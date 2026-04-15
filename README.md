@@ -72,5 +72,5 @@ It's recommended to create an instance of `HsApiClient` per thread in a multithr
 
 ## Author
 
-hyperswitch@juspay.in
+support.global@juspay.io
 
